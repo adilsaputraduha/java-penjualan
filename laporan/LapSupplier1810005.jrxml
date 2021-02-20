@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2019-12-05T10:02:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LapSupplier1810005" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="efdfbd40-d12f-4b73-b11e-7a719667a919">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dbkonter1810005"/>
+	<parameter name="awalsupplier" class="java.lang.String"/>
+	<parameter name="akhirsupplier" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from supplier1810005 where supplierid1810005 between $P{awalsupplier} and $P{akhirsupplier}]]>
+	</queryString>
+	<field name="supplierid1810005" class="java.lang.String"/>
+	<field name="suppliernama1810005" class="java.lang.String"/>
+	<field name="supplieralamat1810005" class="java.lang.String"/>
+	<field name="supplierkota1810005" class="java.lang.String"/>
+	<field name="supplierkodepos1810005" class="java.lang.String"/>
+	<field name="suppliernotelp1810005" class="java.lang.String"/>
+	<field name="supplieremail1810005" class="java.lang.String"/>
+	<group name="supplierid1810005">
+		<groupExpression><![CDATA[$F{supplierid1810005}]]></groupExpression>
+	</group>
+	<group name="Group">
+		<groupExpression><![CDATA[$F{supplierid1810005}]]></groupExpression>
+		<groupHeader>
+			<band height="35">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<rectangle>
+					<reportElement x="20" y="0" width="150" height="30" uuid="2eac78d4-11b3-4115-81be-dbc8ee215ef0">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="170" y="0" width="180" height="30" uuid="ba4bf06e-a7d5-46f4-b9b1-bb110279407c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+				</rectangle>
+				<textField>
+					<reportElement x="170" y="0" width="180" height="30" uuid="25cddeee-41c4-4a42-9193-401c79aec573"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{suppliernama1810005}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="20" y="0" width="150" height="30" uuid="9e52445e-3a81-4f95-8897-1a8451ffc589"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Cambria" size="13" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nama Supplier]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="10" width="199" height="30" uuid="ed9a8e2a-76c3-43d9-a197-919a34ce5821"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[ADINDA CELULAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="40" width="400" height="20" uuid="3c8ac5b2-1f85-4670-a870-835bcb6ea35c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="14" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jalan Berlobang IV Blok H-7 Padang, Sumatera Barat]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-3" y="70" width="566" height="2" uuid="f486bf51-429e-4027-8c28-2c4a19087b87">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="178" y="80" width="199" height="20" uuid="e7d60bb7-52cf-494d-824e-a900f7295bd0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA SUPPLIER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="180" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<rectangle>
+				<reportElement x="20" y="0" width="410" height="180" uuid="5cd23fa2-c983-4ded-b340-2f9218532b21">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="0" width="110" height="30" uuid="c01d5fcd-af98-43e6-9df1-132d422afe52"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Cambria" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="30" width="110" height="30" uuid="d53c1d01-338f-4147-883d-2cec91876b29"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Cambria" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="60" width="110" height="30" uuid="674e0285-5b75-485a-9e3a-7852b805cc1f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Cambria" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kota Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="90" width="110" height="30" uuid="da882032-120f-4034-8d8d-a2af3cefbc1e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Cambria" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Pos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="120" width="110" height="30" uuid="20e59acc-4fe9-4954-85fc-6a776617f515"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Cambria" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Telp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="150" width="110" height="30" uuid="a681e7d8-821c-4d80-9498-fe55fc5c8163"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Cambria" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="0" width="130" height="30" uuid="c099e982-ad88-42d1-b45e-a56c71d03d6d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplierid1810005}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="30" width="250" height="30" uuid="a5d08251-4c20-4be6-9b27-2b210ccbf35f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplieralamat1810005}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="60" width="130" height="30" uuid="2a0a9166-3ef9-418c-939b-852c15cde9e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplierkota1810005}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="90" width="120" height="30" uuid="64cfa97b-a24b-4476-866e-f4df9a216500"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplierkodepos1810005}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="120" width="180" height="30" uuid="2c941e96-af28-4c04-91c7-90f866b8e4df"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{suppliernotelp1810005}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="150" width="200" height="30" uuid="5e78ea1d-9a08-49c0-913c-7b5d38b6a973">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplieremail1810005}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="0" width="20" height="30" uuid="65f82ab1-e3b9-47eb-a509-25c97d3628db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="30" width="20" height="30" uuid="defcd55a-cc4e-4881-8369-a1a6c93f17a4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="60" width="20" height="30" uuid="4513e347-527e-480c-a904-2ff26c26b68c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="150" width="20" height="30" uuid="4e80aa9d-ff02-4fcc-8d17-5beb4c6c3ad6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="120" width="20" height="30" uuid="d76564cd-01d6-48e0-84dc-94f5e353ab78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="90" width="20" height="30" uuid="d567fd13-61bf-4488-a63c-529409bff137"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="114">
+			<staticText>
+				<reportElement x="380" y="0" width="190" height="20" uuid="13a14589-e0c1-4b82-9ce3-e1d1c79b7165"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Padang,..,..............,20..]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="20" width="100" height="20" uuid="69f0684d-cb03-4ad1-8a7b-f430ec2ecef0"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pimpinan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="94" width="160" height="20" uuid="81504f1d-af76-425d-bd58-37cb5e93c1a0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(Adil Saputra Duha)]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
